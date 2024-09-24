@@ -4,8 +4,11 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-		
-		
+		System.out.print("\n[ ");
+		for(int t:tabell) {
+			System.out.print(t +" ");
+		}
+		System.out.print("]");
 
 	}
 
