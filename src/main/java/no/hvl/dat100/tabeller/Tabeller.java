@@ -5,7 +5,6 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 		
-		
 
 	}
 
