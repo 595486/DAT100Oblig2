@@ -8,16 +8,19 @@ public class Tabeller {
 		for(int t:tabell) {
 			System.out.print(t +" ");
 		}
-		System.out.print("]");
+		System.out.print("]\n");
 
 	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
-	}
+		String tab="[";
+		for (int i =0;i<tabell.length-1;i++) {
+			tab=tab+tabell[i]+",";
+		}
+		tab=tab+tabell[tabell.length-1]+"]";
+		return tab;
+		}
 
 	// c)
 	public static int summer(int[] tabell) {
