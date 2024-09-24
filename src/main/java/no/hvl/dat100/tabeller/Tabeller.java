@@ -4,10 +4,6 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-
-		int a = 0;
-		
-		int b = 0;
 		
 
 	}

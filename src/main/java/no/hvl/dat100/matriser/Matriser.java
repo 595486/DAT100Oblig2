@@ -5,7 +5,7 @@ public class Matriser {
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
-		int a = 0;
+		
 	}
 
 	// b)
