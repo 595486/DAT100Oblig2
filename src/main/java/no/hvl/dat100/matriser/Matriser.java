@@ -5,14 +5,20 @@ public class Matriser {
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
-		
+		for (int[] rad : matrise) {
+
+			for (int i : rad) {
+				System.out.print(i);
+			}
+			System.out.println();
+			
+		}
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		
 		
 	}
 
