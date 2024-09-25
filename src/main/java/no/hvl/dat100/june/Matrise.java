@@ -1,6 +1,6 @@
 package no.hvl.dat100.june;
 
-public class Matriser {
+public class Matrise {
 	// a)
 		public static void skrivUt(int[][] matrise) {
 			
