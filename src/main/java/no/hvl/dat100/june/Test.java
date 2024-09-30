@@ -8,7 +8,7 @@ public class Test {
 		
 		String tab = Tabell.tilStreng(t1);
 		
-		Tabell.skrivUt(t1);
+		/*Tabell.skrivUt(t1);
 		int sum= Tabell.summer(t1);	
 		boolean usann = Tabell.finnesTall(t1, 4);
 		boolean sann = Tabell.finnesTall(t1, 89);
@@ -21,7 +21,18 @@ public class Test {
 		usann = Tabell.erSortert(t2);
 		System.out.print(sann+"\n"+usann);
 		int[]sammen=Tabell.settSammen(t1, rev);
-		Tabell.skrivUt(sammen);
+		Tabell.skrivUt(sammen);*/
+		int[][] matrise = new int[3][4];
+		int[][] obs = {
+				{4,7,9,0},
+				{4,8,8,9,3},
+				{-1,7,-2}	
+				};
+		
+		String mat = Matrise.tilStreng(obs);
+		int[][] abs =Matrise.skaler(3, obs);
+		System.out.println(mat);
+		Matrise.skrivUt(abs);
+		System.out.println(Matrise.erLik(abs, obs)+" "+Matrise.erLik(abs, abs));
 	}
-
 }

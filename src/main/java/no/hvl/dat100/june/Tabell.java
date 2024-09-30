@@ -89,7 +89,7 @@ public class Tabell {
 																	// forskjellege løysingar)
 		int lengde = tabell1.length + tabell2.length, index = 0;
 		int[] sammen1 = new int[lengde], sammen2 = new int[lengde];
-		/* Alt 1 */
+		/* Alt 1 */ /*Faglærer seier alt 1 var tanken*/
 		for (int t : tabell1) {
 			sammen1[index] = t;
 			index++;
