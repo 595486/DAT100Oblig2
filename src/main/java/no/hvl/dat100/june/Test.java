@@ -28,11 +28,11 @@ public class Test {
 				{4,8,8,9,3},
 				{-1,7,-2}	
 				};
-		
-		String mat = Matrise.tilStreng(obs);
+		Matrise.skrivUt(obs);
+		/*String mat = Matrise.tilStreng(obs);
 		int[][] abs =Matrise.skaler(3, obs);
 		System.out.println(mat);
 		Matrise.skrivUt(abs);
-		System.out.println(Matrise.erLik(abs, obs)+" "+Matrise.erLik(abs, abs));
+		System.out.println(Matrise.erLik(abs, obs)+" "+Matrise.erLik(abs, abs));*/
 	}
 }

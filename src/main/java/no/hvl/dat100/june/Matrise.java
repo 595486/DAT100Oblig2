@@ -2,8 +2,13 @@ package no.hvl.dat100.june;
 
 public class Matrise {
 	// a)
-	public static void skrivUt(int[][] matrise) { // kan bruke tilStreng metoden.
-		System.out.print("\n[ ");
+	public static void skrivUt(int[][] matrise) { // June
+		/*Denne metoden tar inn ein matrise og skriv den ut i konsoll vinduet på formatet:
+		 * [ [<tall> .. <tall>] .. [<tall> .. <tall>] ]
+		 * 
+		 * MERK! Den vil skrive det på same linja som forrige utskrift om den ikkje er skrive ut med println
+		 */
+		System.out.print("[ ");
 		for (int tab[] : matrise) {
 			System.out.print("[ ");
 			for (int t : tab) {
@@ -15,7 +20,10 @@ public class Matrise {
 	}
 
 	// b)
-	public static String tilStreng(int[][] matrise) {
+	public static String tilStreng(int[][] matrise) { // June
+		/* Denne metoden returnerer ein String av ein matrise (innverdi) på formatet:
+		 * <tall> .. <tall>\n ..\n <tall> .. <tall>\n
+		 */
 		String mat = "";
 		for (int tab[] : matrise) {
 			for (int t : tab) {
@@ -27,11 +35,9 @@ public class Matrise {
 	}
 
 	// c)
-	public static int[][] skaler(int tall, int[][] matrise) {
-		/*
-		 * Denne metoden oppretter ein ny matrise, der alle tallene frå ei
-		 * matrise(innverdi) er multipisert med eit tall(innverdi) for så å gi den nye
-		 * matrisa.
+	public static int[][] skaler(int tall, int[][] matrise) { //June
+		/* Denne metoden oppretter ein ny matrise, der alle tallene frå ei matrise(innverdi) 
+		 * er multipisert med eit tall(innverdi) for så å gi den nye matrisa.
 		 */
 		int[][] nyMat = new int[matrise.length][]; // Opprette matrise, med plass til alle tabellane
 		for (int i = 0; i < matrise.length; i++) { // Kode for å plasere tabeller i matrise
@@ -48,7 +54,9 @@ public class Matrise {
 	}
 
 	// d)
-	public static boolean erLik(int[][] a, int[][] b) {
+	public static boolean erLik(int[][] a, int[][] b) { //June
+		/* Denne metoden sjekker om to matriser er like og returnerer ein sannheitsverdi 
+		 */
 		boolean lik = true;
 		if (a.length != b.length) {// Sjekker at matrisene har same lengde, og returnerer false dersom nei.
 			lik = false;
@@ -73,10 +81,15 @@ public class Matrise {
 	}
 
 	// e)
-	public static int[][] speile(int[][] matrise) {
-		int lengde = matrise.length; // Tar vare på lengda til matrisa (sidan den skal være kvadratisk, kunne
-										// forsåvidt laga kode som speiler ei ikkje kvadratisk matrise også, får sjå om
-										// eg får tid...
+	public static int[][] speile(int[][] matrise) {//June
+		/* Denne metoden returnerer ein speilvendt matrise av inn matrisa.
+		 * 
+		 * MERK! Matrisa må vere kvadratisk. 
+		 * Alt 2 tar alle rektangulære matriser, men er ikkje implimentert til å gi ein returverdi
+		 */
+		
+		/*ALT 1 (Kvadratisk matrise)*/
+		int lengde = matrise.length; 
 		int[][] speil = new int[lengde][lengde]; // Opprette ny matrise
 		for (int i = 0; i < lengde; i++) { // Ytre matrise
 			for (int j = 0; j < lengde; j++) { // Indre tabell
@@ -87,11 +100,24 @@ public class Matrise {
 				speil[i] = tab; // plasserer tabellen i matrisa
 			}
 		}
+		/*ALT 2 (Rektangulær matrise)*/
+		int l = matrise.length, b = matrise[0].length; 
+		int[][] speil2 = new int[b][l]; // Opprette ny matrise, der lengde/bredde er speilvendt
+		for (int i = 0; i < b; i++) { // Ytre matrise
+			for (int j = 0; j < l; j++) { // Indre tabell
+				int[] tab = new int[l]; // Oppretter tabell som skal plasseres
+				for (int t = 0; t < l; t++) { // plassering av tall
+					tab[t] = matrise[j][i];
+				}
+				speil2[i] = tab; // plasserer tabellen i matrisa
+			}
+		}
+		
 		return speil;
 	}
 
 	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
+	public static int[][] multipliser(int[][] a, int[][] b) { //June
 		/*
 		 * Denne metoden tar inn ein matrise a og ein matrise b og multipliserer dei
 		 * saman til ein ny matrise ab.
@@ -101,7 +127,7 @@ public class Matrise {
 		 * Resultat matrisen blir skrive ut som om første alternativ er sant.
 		 */
 		int kolloner, rekker, felles;
-		if (a.length != b[0].length) {
+		if (a.length != b[0].length) { //Dette gjør at så lenge ein av dei motsatte sidene til matrisene a og b er like kan metoden utføres
 			kolloner = a.length;
 			rekker = b[0].length;
 			felles = b.length;
