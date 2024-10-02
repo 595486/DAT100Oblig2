@@ -5,9 +5,17 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 		
+<<<<<<< Updated upstream
 		// TODO
 				throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
 				
+=======
+		for (int i=0; i<tabell.length; i++) {
+			
+			System.out.println(tabell[i]);
+		}
+
+>>>>>>> Stashed changes
 	}
 
 	// b)
