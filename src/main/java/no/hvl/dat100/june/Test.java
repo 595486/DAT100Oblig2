@@ -5,6 +5,11 @@ public class Test {
 	public static void main(String[] args) {
 		int[] t1= {42,67,89};
 		int[] t2= {42,67,89,55,72,84};
+		int[][]speile = {
+				{1,2,3},
+				{4,5,6},
+				{7,8,9}
+		};
 		
 		String tab = Tabell.tilStreng(t1);
 		
@@ -34,5 +39,7 @@ public class Test {
 		System.out.println(mat);
 		Matrise.skrivUt(abs);
 		System.out.println(Matrise.erLik(abs, obs)+" "+Matrise.erLik(abs, abs));*/
+		int[][] speilet=Matrise.speile(speile);
+		Matrise.skrivUt(speilet);
 	}
 }
